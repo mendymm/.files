@@ -36,9 +36,10 @@
     # fs tools
     rclone
 
-    # compilers
+    # programing
     typst
     go
+    python3
   ];
 
   # Necessary for using flakes on this system.
