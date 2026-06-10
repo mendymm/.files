@@ -18,6 +18,7 @@
   users.users.mendy = {
     shell = pkgs.fish;
     uid = 501;
+    home = "/Users/mendy";
   };
 
   # Set Git commit hash for darwin-version.
