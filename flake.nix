@@ -24,5 +24,11 @@
           inherit self;
         };
       };
+
+      # bootstrap shell with darwin-rebuild and friends installed
+      devShells.aarch64-darwin.bootstrap = nixpkgs.legacyPackages.aarch64-darwin.mkShellNoCC {
+        packages = [ nix-darwin.packages.aarch64-darwin.default ];
+      };
     };
+
 }
