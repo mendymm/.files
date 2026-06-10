@@ -49,6 +49,7 @@
   programs.fish.enable = true;
 
   users.knownUsers = [ "mendy" ];
+  system.primaryUser = "mendy";
 
   users.users.mendy = {
     shell = pkgs.fish;
@@ -58,6 +59,17 @@
 
   # Set Git commit hash for darwin-version.
   system.configurationRevision = self.rev or self.dirtyRev or null;
+  system.defaults.finder = {
+    AppleShowAllFiles = true;
+    FXPreferredViewStyle = "Nlsv";
+    AppleShowAllExtensions = true;
+    _FXSortFoldersFirst = true;
+  };
+
+  system.defaults.menuExtraClock = {
+    Show24Hour = true;
+    ShowSeconds = true;
+  };
 
   nixpkgs.config.allowUnfreePredicate =
     pkg:
