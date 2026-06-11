@@ -1,3 +1,8 @@
+
+require("precognition").setup({
+  -- your options here
+})
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
