@@ -12,7 +12,6 @@
     nil
     nixd
     delta
-    git
     curl
     just
 
