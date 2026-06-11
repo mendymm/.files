@@ -1,5 +1,9 @@
 { pkgs, ... }: {
-
+  programs.neovim = {
+    enable = true;
+    initLua = builtins.readFile ./nvim/init.lua;
+    
+  };
   home = {
     packages = with pkgs; [
       lazygit

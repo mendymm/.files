@@ -9,7 +9,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     # system utils
-    neovim
+    vim
     nil
     nixd
     delta
@@ -40,11 +40,14 @@
     typst
     go
     python3
+    lua
+    stylua
   ];
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
-   system.keyboard.remapCapsLockToEscape = true; 
+  system.keyboard.remapCapsLockToEscape = true;
+  system.keyboard.enableKeyMapping = true;
   # Enable alternative shell support in nix-darwin.
   programs.fish.enable = true;
 
