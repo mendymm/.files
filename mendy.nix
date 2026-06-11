@@ -1,8 +1,5 @@
 {pkgs, ...}: {
-  programs.neovim = {
-    enable = true;
-    initLua = builtins.readFile ./nvim/init.lua;
-  };
+  programs.neovim = import ./nvim/nvim.nix {pkgs = pkgs;};
   programs.git = {
     enable = true;
     settings = {
