@@ -6,6 +6,7 @@
   };
   home = {
     packages = with pkgs; [
+      (import ./fmt_dots.nix {inherit pkgs;})
       lazygit
       bat
       delta
