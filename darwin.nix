@@ -3,8 +3,7 @@
   self,
   lib,
   ...
-}:
-{
+}: {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -51,7 +50,7 @@
   # Enable alternative shell support in nix-darwin.
   programs.fish.enable = true;
 
-  users.knownUsers = [ "mendy" ];
+  users.knownUsers = ["mendy"];
   system.primaryUser = "mendy";
 
   users.users.mendy = {
@@ -74,8 +73,7 @@
     ShowSeconds = true;
   };
 
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
+  nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "1password-cli"
     ];

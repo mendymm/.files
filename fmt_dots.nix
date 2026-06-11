@@ -1,5 +1,5 @@
-{pkgs,...}:(
-  pkgs.writeShellApplication{
+{pkgs, ...}: (
+  pkgs.writeShellApplication {
     name = "fmt-dots";
     runtimeInputs = with pkgs; [alejandra stylua];
     text = ''
